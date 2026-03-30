@@ -17,62 +17,59 @@
         .glass-card {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 30px; border-radius: 25px; text-align: center;
+            padding: 40px; border-radius: 30px; text-align: center;
             box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
-            max-width: 350px; width: 80%;
+            max-width: 400px; width: 90%;
         }
 
-        h1 { margin: 0; font-size: 1.5em; font-weight: 800; letter-spacing: 1px; 
+        h1 { margin: 0; font-size: 2.2em; font-weight: 800; letter-spacing: 2px; 
              background: linear-gradient(90deg, #5865F2, #0088cc); 
-             -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+             -webkit-background-clip: text; -webkit-text-fill-color: transparent; text-transform: uppercase; }
+
+        .desc { color: #888; margin-top: 20px; font-size: 0.9em; }
 
         /* Nút ở góc trái dưới cùng */
         .bottom-left-buttons {
-            position: fixed;
-            bottom: 20px;
-            left: 20px;
-            display: flex;
-            gap: 10px;
-            z-index: 999;
+            position: fixed; bottom: 20px; left: 20px;
+            display: flex; gap: 12px; z-index: 999;
         }
 
         .mini-btn {
-            width: 45px; height: 45px;
-            border-radius: 50%;
+            width: 50px; height: 50px; border-radius: 50%;
             display: flex; align-items: center; justify-content: center;
-            text-decoration: none;
-            transition: 0.3s;
-            border: 1px solid rgba(255,255,255,0.1);
-            backdrop-filter: blur(5px);
+            text-decoration: none; transition: 0.3s;
+            border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(5px);
         }
+        .btn-ds { background: #5865F2; }
+        .btn-tg { background: #0088cc; }
+        .mini-btn:hover { transform: translateY(-5px) scale(1.1); box-shadow: 0 5px 15px rgba(0,0,0,0.3); }
 
-        .btn-ds { background: #5865F2; color: white; }
-        .btn-tg { background: #0088cc; color: white; }
-        .mini-btn:hover { transform: translateY(-5px) scale(1.1); }
-
-        #chat-widget { margin-top: 20px; border-radius: 15px; overflow: hidden; height: 300px; background: rgba(0,0,0,0.3); }
+        .footer { position: absolute; bottom: 20px; color: #222; font-size: 0.8em; }
     </style>
 </head>
 <body>
 
     <div class="glass-card">
         <h1>CHÀO MỪNG BẠN</h1>
-        <div id="chat-widget">
-            <script async src="https://telegram.org/js/telegram-widget.js?22" 
-                data-telegram-post="du_an_cua_phuc/1" data-width="100%"></script>
-            <p style="font-size: 0.7em; color: #444; margin-top: 100px;">Hệ thống Chat đang tải...</p>
-        </div>
+        <p class="desc">Bấm vào bong bóng màu xanh ở góc phải màn hình để chat với AI của mình nhé!</p>
     </div>
 
     <div class="bottom-left-buttons">
-        <a href="https://discord.gg/Km5fS7jMF" target="_blank" class="mini-btn btn-ds" title="Discord">
+        <a href="https://discord.gg/Km5fS7jMF" target="_blank" class="mini-btn btn-ds">
             <svg width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025 13.225 13.225 0 0 0-3.257 1.011.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.248.595.05.05 0 0 0-.023.07c.232.469.509.913.822 1.332a.05.05 0 0 0 .056.019 13.285 13.285 0 0 0 3.995-2.02.051.051 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/></svg>
         </a>
-        <a href="https://t.me/Dat1510_bot" target="_blank" class="mini-btn btn-tg" title="Telegram">
+        <a href="https://t.me/Dat1510_bot" target="_blank" class="mini-btn btn-tg">
             <svg width="24" height="24" fill="white" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM12.191 5.274L2.99 8.848c-.145.057-.14.137-.02.174l2.36.736 5.48-3.454c.26-.157.497-.073.3.102l-4.445 4.011-.173 2.569c.253 0 .364-.116.506-.254l1.216-1.183 2.528 1.867c.466.257.8.124.916-.436l1.656-7.8c.17-.68-.255-.986-.702-.788z"/></svg>
         </a>
     </div>
+
+    <div class="footer">© 2026 Phúc Lưu</div>
+
+    <script>
+    (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="31ad5wDb-q6qmu4A3q2hA";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
+    </script>
 
 </body>
 </html>
